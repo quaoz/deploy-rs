@@ -17,14 +17,7 @@
 
   outputs = { self, nixpkgs, utils, ... }@inputs:
   {
-    overlays.default = final: prev: let
-      darwinOptions = final.lib.optionalAttrs final.stdenv.isDarwin {
-        buildInputs = with final.darwin.apple_sdk.frameworks; [
-          SystemConfiguration
-          CoreServices
-        ];
-      };
-    in
+    overlays.default = final: prev:
     {
       deploy-rs = {
 
