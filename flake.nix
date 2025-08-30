@@ -21,7 +21,7 @@
     {
       deploy-rs = {
 
-        deploy-rs = final.rustPlatform.buildRustPackage (darwinOptions // {
+        deploy-rs = final.rustPlatform.buildRustPackage ({
           pname = "deploy-rs";
           version = "0.1.0";
 
